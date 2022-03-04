@@ -1,0 +1,214 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlayVisible {
+  visibility: visible;
+  opacity: 1;
+
+  .wrapper {
+    transform: translateX(0);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 385px;
+  height: 94%;
+  right: 0;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 3%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  h2 {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.blockItemsWrapper {
+  flex: 1;
+  height: 65%;
+}
+
+.blockItems {
+  flex: 1;
+  overflow: auto;
+  margin-bottom: 40px;
+  height: 65%;
+}
+
+.containerItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid #F3F3F3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.itemPicture {
+  height: 70px;
+  margin-right: 20px;
+}
+
+.itemDescription {
+  padding-right: 20px;
+
+  p {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  b {
+    font-size: 14px;
+  }
+}
+
+.cartButtonRemove {
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.cartTotalBLock {
+  ul {
+    margin-bottom: 40px;
+
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #dfdfdf;
+      position: relative;
+      top: -4px;
+      margin: 0 7px;
+    }
+  }
+
+  .checkoutButton {
+    position: relative;
+
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      transition: transform 0.15s ease-in-out;
+    }
+  }
+}
+
+.checkoutButton {
+  width: 100%;
+  height: 55px;
+  background: #9DD558;
+  border-radius: 18px;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background: lighten(#9DD558, 5%);
+  }
+
+  &:active {
+    background: darken(#9DD558, 5%);
+  }
+}
+
+.emptyBasketWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 180px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  span {
+    width: 285px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0.4;
+    margin-bottom: 40px;
+  }
+
+  button {
+    width: 245px;
+    height: 55px;
+    background: #9DD458;
+    border: 0;
+    border-radius: 18px;
+    font-size: 16px;
+    color: white;
+    position: relative;
+
+    &:hover {
+      img {
+        transform: translateX(-5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 25px;
+      top: 20px;
+      transition: transform 0.15s ease-in-out;
+    }
+
+    &:hover {
+      background: lighten(#9DD558, 5%);
+    }
+
+    &:active {
+      background: darken(#9DD558, 5%);
+    }
+  }
+}
+
+.emptyBasketImage {
+  height: 120px;
+}

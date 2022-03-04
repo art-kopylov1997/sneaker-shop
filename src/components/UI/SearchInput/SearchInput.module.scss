@@ -1,0 +1,32 @@
+.root {
+  border: 1px solid #F3F3F3;
+  display: flex;
+  border-radius: 10px;
+  padding: 0 13px;
+
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.wrapperButtonRemove {
+  display: flex;
+}
+
+.buttonRemove {
+  width: 20px;
+  margin: auto;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.15s ease-in-out;
+    cursor: pointer;
+  }
+}
